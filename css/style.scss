@@ -1,0 +1,558 @@
+/*
+======================================
+GENERAL
+======================================
+*/
+
+// Variables de couleurs
+$dark-red: #850606;
+$dark-blue: #068585;
+$light-blue: #c1e8e8;
+$bg-body: #eff0f4;
+
+* {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+body {
+    padding: 0;
+    background: $bg-body;
+}
+
+p {
+    text-align: justify;
+}
+
+.part {
+    padding-bottom: 3%;
+
+    >p,
+    >ul,
+    >table {
+        margin: 0 8%;
+    }
+}
+
+.fonce {
+    background-color: $light-blue;
+}
+
+h2 {
+    padding-bottom: 3%;
+    font-size: 2.8em;
+    margin: 0;
+    color: $dark-blue;
+}
+
+h3 {
+    color: $dark-red;
+    margin: 0;
+    text-align: center;
+    padding: 3% 0;
+}
+
+h4 {
+    padding-bottom: 3%;
+    font-size: 1.3rem;
+}
+
+// Navigation
+
+#navig {
+    background-color: $dark-blue;
+    padding-left: 7%;
+    padding-right: 6%;
+}
+
+// Tailles
+$hauteur-navbar: 80px;
+$largeur-logo: 200px;
+
+// Navbar
+#navig {
+  height: $hauteur-navbar;
+  background-color: transparent; // Navbar transparente par défaut
+  font-family: $dark-blue;
+  padding-left: 7%;
+  padding-right: 6%;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  transition: background-color 0.3s ease-in-out;
+  top: 0;
+  position: fixed;
+  
+  .navbar-brand {
+    color: $dark-red;
+    font-size: 2rem;
+    font-weight: bold;
+    width: $largeur-logo;
+    
+    &:hover, &:focus {
+      color: $dark-blue;
+    }
+  }
+  
+  .navbar-nav {
+    align-items: center;
+    margin-left: auto;
+    font-weight: 500;
+    
+    .nav-link {
+      color: $dark-red;
+      font-size: 1.2rem;
+      margin-left: 2rem;
+      
+      &:hover, &:focus {
+        color: $dark-blue;
+      }
+      
+      &.active {
+        font-weight: bold;
+        color: $dark-blue;
+      }
+    }
+    
+    .dropdown-toggle::after {
+      display: none;
+    }
+    
+    .dropdown-menu {
+      background-color: $dark-blue;
+      border: none;
+      
+      .dropdown-item {
+        color: $bg-body;
+        font-size: 1.2rem;
+        
+        &:hover, &:focus {
+          color: $bg-body;
+          background-color: darken($dark-blue, 10%);
+        }
+      }
+    }
+  }
+  
+  // Navbar bleue après scroll
+  &.scroll {
+    background-color: $dark-blue;
+    
+    .navbar-brand,
+    .nav-link {
+      color: $bg-body;
+      
+      &:hover, &:focus {
+        color: $light-blue;
+      }
+    }
+    
+    // .dropdown-menu {
+    //   background-color: $dark-blue;
+      
+    //   .dropdown-item {
+    //     color: $bg-body;
+        
+    //     &:hover, &:focus {
+    //       color: $bg-body;
+    //       background-color: darken($dark-blue, 10%);
+    //     }
+    //   }
+    // }
+  }
+}
+
+
+// Bannière
+
+#banner {
+    display: flex;
+    position: relative;
+    height: 97vh;
+
+    #imgbanner {
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        z-index: 1;
+        opacity: 0.45;
+    }
+
+    .resume {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        margin: 0 8%;
+        position: absolute;
+        z-index: 2;
+    }
+}
+
+// Parallax
+
+.parallax {
+    position: relative;
+    min-height: 40vh;
+    opacity: 0.7;
+
+    box-shadow: inset 3px 3px 9px rgba(0, 0, 0, 0.45);
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#img01 {
+    background-image: url(../ressources/parallax1.jpg);
+}
+
+#img02 {
+    background-image: url(../ressources/parallax2.jpg);
+}
+
+/*
+======================================
+EXPERTISE
+======================================
+*/
+
+// Gouttes d'eau correspondant aux 3 équipes
+.contain {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2% 8%;
+    gap: 25px 25px;
+
+    // Caractéristiques d'une goutte
+    .drop {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.1),
+            25px 35px 20px rgba(0, 0, 0, 0.1),
+            25px 30px 30px rgba(0, 0, 0, 0.1),
+            inset -20px -20px 20px rgba(200, 200, 200, 0.9);
+        transition: 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        // Forme de chaque goutte
+        &:nth-child(1) {
+            border-radius: 53% 47% 48% 52% / 62% 32% 68% 38%;
+        }
+
+        &:nth-child(2) {
+            border-radius: 43% 57% 61% 39% / 32% 52% 48% 68%;
+        }
+
+        &:nth-child(3) {
+            border-radius: 49% 51% 50% 50% / 62% 26% 74% 38%;
+        }
+
+        &:hover {
+            border-radius: 50%;
+        }
+
+        // Petits reflets
+        &::before {
+            content: "";
+            position: absolute;
+            top: 30px;
+            left: 70px;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50px;
+            left: 90px;
+            width: 7px;
+            height: 7px;
+            background: #fff;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        .content {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+            gap: 20px;
+
+            // Deuxième petite goutte contenant le numéro d'équipe
+            h2 {
+                position: relative;
+                width: 50px;
+                height: 50px;
+                background: #eff0f4;
+                border-radius: 50%;
+                box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.1),
+                    inset -2px -5px 10px rgba(255, 255, 255, 1),
+                    10px 7px 15px rgba(0, 0, 0, 0.15);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5em;
+            }
+
+            a,
+            .bouton {
+                position: relative;
+                padding: 0 15px;
+                background: $dark-red;
+                text-decoration: none;
+                color: #fff;
+                border-radius: 25px;
+                opacity: 0.75;
+                transition: 0.3s;
+                border: none;
+            }
+
+            a:hover,
+            .bouton:hover {
+                opacity: 1;
+                color: #fff;
+            }
+        }
+    }
+}
+
+/*
+======================================
+EN ATTENDANT
+======================================
+*/
+
+#groupes {
+    display: flex;
+    align-items: center;
+}
+
+#anim {
+    width: 100%;
+    height: 50vh;
+    background-color: $bg-body;
+    margin-right: 8%;
+}
+
+.aQui {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45vw;
+    margin: 0 8%;
+}
+
+.donneurs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.grpDonneur {
+    background-color: $dark-red;
+    color: $bg-body;
+    height: 5%;
+    width: 5%;
+    text-align: center;
+    border: none;
+}
+
+.receveurs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.grpReceveur {
+    border: 1px solid $dark-red;
+    color: $dark-blue;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+
+    &:hover {
+        background-color: yellow;
+    }
+}
+
+
+/*
+======================================
+ILS NOUS SOUTIENNENT
+======================================
+*/
+
+// Description de l'animation
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 5));
+    }
+}
+
+// Conteneur du slider
+.slider {
+    background: #fff;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 150px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 70vw;
+
+    // Blur sur les côtés
+    &::before,
+    &::after {
+        background: linear-gradient(to right,
+                rgba(255, 255, 255, 1) 0%,
+                rgba(255, 255, 255, 0) 100%);
+        content: "";
+        height: 150px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+    }
+
+    &::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+
+    &::before {
+        left: 0;
+        top: 0;
+    }
+
+    // Animation du slider : rotation des images en boucle
+    .slide-track {
+        animation: scroll 20s linear infinite;
+        display: flex;
+        width: calc(250px * 10);
+    }
+
+    // Taille du slider et des images
+    .slide {
+        height: 150px;
+        width: 250px;
+
+        img {
+            height: 150px;
+            width: 250px;
+            object-fit: contain;
+        }
+    }
+}
+
+/*
+======================================
+FOOTER
+======================================
+*/
+
+#copyr {
+    text-align: center;
+    padding: 1.5% 0;
+}
+
+/*
+======================================
+PAGE EQUIPE
+======================================
+*/
+
+.banniere {
+    position: relative;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    .imgequipe {
+        width: 100%;
+        height: 40vh;
+        object-fit: cover;
+        position: absolute;
+        z-index: 1;
+        opacity: 0.40;
+    }
+
+    .nomequipe {
+        position: absolute;
+        z-index: 2;
+        font-size: 3em;
+        align-self: center;
+        padding: 0 8%;
+    }
+}
+
+.projet {
+    padding-bottom: 3%;
+    margin: 0 8%;
+}
+
+.cards {
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 1.5em;
+    padding: 1% 8%;
+    justify-items: center;
+    align-items: center;
+
+    .card {
+        border: none;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        .card-body {
+            text-align: left;
+
+            .card-title {
+                font-size: medium;
+            }
+        }
+    }
+}
+
+/*
+======================================
+PAGE CONTACT
+======================================
+*/
+
+#titreContact {
+    padding: 2% 0;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+}
+
+.star {
+    color: red;
+}

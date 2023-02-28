@@ -1,0 +1,461 @@
+/*
+======================================
+GENERAL
+======================================
+*/
+* {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+body {
+  padding: 0;
+  background: #eff0f4;
+}
+
+p {
+  text-align: justify;
+}
+
+.part {
+  padding-bottom: 3%;
+}
+.part > p,
+.part > ul,
+.part > table {
+  margin: 0 8%;
+}
+
+.fonce {
+  background-color: #c1e8e8;
+}
+
+h2 {
+  padding-bottom: 3%;
+  font-size: 2.8em;
+  margin: 0;
+  color: #068585;
+}
+
+h3 {
+  color: #850606;
+  margin: 0;
+  text-align: center;
+  padding: 3% 0;
+}
+
+h4 {
+  padding-bottom: 3%;
+  font-size: 1.3rem;
+}
+
+#navig {
+  background-color: #068585;
+  padding-left: 7%;
+  padding-right: 6%;
+}
+
+#navig {
+  height: 80px;
+  background-color: transparent;
+  font-family: #068585;
+  padding-left: 7%;
+  padding-right: 6%;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  transition: background-color 0.3s ease-in-out;
+  top: 0;
+  position: fixed;
+}
+#navig .navbar-brand {
+  color: #850606;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 200px;
+}
+#navig .navbar-brand:hover, #navig .navbar-brand:focus {
+  color: #068585;
+}
+#navig .navbar-nav {
+  align-items: center;
+  margin-left: auto;
+  font-weight: 500;
+}
+#navig .navbar-nav .nav-link {
+  color: #850606;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+}
+#navig .navbar-nav .nav-link:hover, #navig .navbar-nav .nav-link:focus {
+  color: #068585;
+}
+#navig .navbar-nav .nav-link.active {
+  font-weight: bold;
+  color: #068585;
+}
+#navig .navbar-nav .dropdown-toggle::after {
+  display: none;
+}
+#navig .navbar-nav .dropdown-menu {
+  background-color: #068585;
+  border: none;
+}
+#navig .navbar-nav .dropdown-menu .dropdown-item {
+  color: #eff0f4;
+  font-size: 1.2rem;
+}
+#navig .navbar-nav .dropdown-menu .dropdown-item:hover, #navig .navbar-nav .dropdown-menu .dropdown-item:focus {
+  color: #eff0f4;
+  background-color: #045454;
+}
+#navig.scroll {
+  background-color: #068585;
+}
+#navig.scroll .navbar-brand,
+#navig.scroll .nav-link {
+  color: #eff0f4;
+}
+#navig.scroll .navbar-brand:hover, #navig.scroll .navbar-brand:focus,
+#navig.scroll .nav-link:hover,
+#navig.scroll .nav-link:focus {
+  color: #c1e8e8;
+}
+
+#banner {
+  display: flex;
+  position: relative;
+  height: 97vh;
+}
+#banner #imgbanner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+  opacity: 0.45;
+}
+#banner .resume {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  margin: 0 8%;
+  position: absolute;
+  z-index: 2;
+}
+
+.parallax {
+  position: relative;
+  min-height: 40vh;
+  opacity: 0.7;
+  box-shadow: inset 3px 3px 9px rgba(0, 0, 0, 0.45);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#img01 {
+  background-image: url(../ressources/parallax1.jpg);
+}
+
+#img02 {
+  background-image: url(../ressources/parallax2.jpg);
+}
+
+/*
+======================================
+EXPERTISE
+======================================
+*/
+.contain {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2% 8%;
+  gap: 25px 25px;
+}
+.contain .drop {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.1), 25px 35px 20px rgba(0, 0, 0, 0.1), 25px 30px 30px rgba(0, 0, 0, 0.1), inset -20px -20px 20px rgba(200, 200, 200, 0.9);
+  transition: 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contain .drop:nth-child(1) {
+  border-radius: 53% 47% 48% 52%/62% 32% 68% 38%;
+}
+.contain .drop:nth-child(2) {
+  border-radius: 43% 57% 61% 39%/32% 52% 48% 68%;
+}
+.contain .drop:nth-child(3) {
+  border-radius: 49% 51% 50% 50%/62% 26% 74% 38%;
+}
+.contain .drop:hover {
+  border-radius: 50%;
+}
+.contain .drop::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 70px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+.contain .drop::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 90px;
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+.contain .drop .content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  gap: 20px;
+}
+.contain .drop .content h2 {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #eff0f4;
+  border-radius: 50%;
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.1), inset -2px -5px 10px rgb(255, 255, 255), 10px 7px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+.contain .drop .content a,
+.contain .drop .content .bouton {
+  position: relative;
+  padding: 0 15px;
+  background: #850606;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  transition: 0.3s;
+  border: none;
+}
+.contain .drop .content a:hover,
+.contain .drop .content .bouton:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+/*
+======================================
+EN ATTENDANT
+======================================
+*/
+#groupes {
+  display: flex;
+  align-items: center;
+}
+
+#anim {
+  width: 100%;
+  height: 50vh;
+  background-color: #eff0f4;
+  margin-right: 8%;
+}
+
+.aQui {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45vw;
+  margin: 0 8%;
+}
+
+.donneurs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.grpDonneur {
+  background-color: #850606;
+  color: #eff0f4;
+  height: 5%;
+  width: 5%;
+  text-align: center;
+  border: none;
+}
+
+.receveurs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.grpReceveur {
+  border: 1px solid #850606;
+  color: #068585;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+}
+.grpReceveur:hover {
+  background-color: yellow;
+}
+
+/*
+======================================
+ILS NOUS SOUTIENNENT
+======================================
+*/
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1250px);
+  }
+}
+.slider {
+  background: #fff;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 150px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 70vw;
+}
+.slider::before, .slider::after {
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 150px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  animation: scroll 20s linear infinite;
+  display: flex;
+  width: 2500px;
+}
+.slider .slide {
+  height: 150px;
+  width: 250px;
+}
+.slider .slide img {
+  height: 150px;
+  width: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/*
+======================================
+FOOTER
+======================================
+*/
+#copyr {
+  text-align: center;
+  padding: 1.5% 0;
+}
+
+/*
+======================================
+PAGE EQUIPE
+======================================
+*/
+.banniere {
+  position: relative;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.banniere .imgequipe {
+  width: 100%;
+  height: 40vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.4;
+}
+.banniere .nomequipe {
+  position: absolute;
+  z-index: 2;
+  font-size: 3em;
+  align-self: center;
+  padding: 0 8%;
+}
+
+.projet {
+  padding-bottom: 3%;
+  margin: 0 8%;
+}
+
+.cards {
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 1.5em;
+  padding: 1% 8%;
+  justify-items: center;
+  align-items: center;
+}
+.cards .card {
+  border: none;
+}
+.cards .card:hover {
+  transform: scale(1.1);
+}
+.cards .card .card-body {
+  text-align: left;
+}
+.cards .card .card-body .card-title {
+  font-size: medium;
+}
+
+/*
+======================================
+PAGE CONTACT
+======================================
+*/
+#titreContact {
+  padding: 2% 0;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+}
+
+.star {
+  color: red;
+}/*# sourceMappingURL=style.css.map */
