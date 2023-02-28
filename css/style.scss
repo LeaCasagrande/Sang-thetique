@@ -147,18 +147,18 @@ $largeur-logo: 200px;
       }
     }
     
-    // .dropdown-menu {
-    //   background-color: $dark-blue;
+    .dropdown-menu {
+      background-color: $dark-blue;
       
-    //   .dropdown-item {
-    //     color: $bg-body;
+      .dropdown-item {
+        color: $bg-body;
         
-    //     &:hover, &:focus {
-    //       color: $bg-body;
-    //       background-color: darken($dark-blue, 10%);
-    //     }
-    //   }
-    // }
+        &:hover, &:focus {
+          color: $bg-body;
+          background-color: darken($dark-blue, 10%);
+        }
+      }
+    }
   }
 }
 
