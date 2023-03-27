@@ -1,12 +1,12 @@
 <!-- Bannière équipe -->
 <div class="banniere">
     <img class="imgequipe" src="../../ressources/<?php echo $photo[0]['url_image'] ?>" alt="">
-    <h2 class="nomequipe">Equipe <?php echo $membres[0]['id_equipe'] ?> : <?php echo $membres[0]['nom_equipe'] ?></h2>
+    <h1 class="nomequipe">Equipe <?php echo $membres[0]['id_equipe'] ?> : <?php echo $membres[0]['nom_equipe'] ?></h1>
 </div>
 
 <!-- Projet -->
 <div class="part">
-    <h3>Projets de recherche</h3>
+    <h2>Projets de recherche</h2>
     <?php foreach ($projets as $projet) : ?>
         <div class="projet">
             <h4><?php echo $projet['titre_projet'] ?></h4>
@@ -17,7 +17,7 @@
 
 <!-- Membres -->
 <div class="part fonce">
-    <h3>Membres</h3>
+    <h2>Membres</h2>
     <div class="container-fluid cards">
         <?php foreach ($membres as $data) : ?>
             <div class="card" style="width: 15rem;">

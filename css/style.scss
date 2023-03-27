@@ -1,8 +1,12 @@
 /*
-======================================
-GENERAL
-======================================
+ ██████  ███████ ███    ██ ███████ ██████   █████  ██      
+██       ██      ████   ██ ██      ██   ██ ██   ██ ██      
+██   ███ █████   ██ ██  ██ █████   ██████  ███████ ██      
+██    ██ ██      ██  ██ ██ ██      ██   ██ ██   ██ ██      
+ ██████  ███████ ██   ████ ███████ ██   ██ ██   ██ ███████ 
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 // Variables de couleurs
 $dark-red: #850606;
@@ -13,6 +17,7 @@ $bg-body: #eff0f4;
 * {
     margin-right: 0;
     margin-left: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -27,6 +32,7 @@ p {
 .part {
     padding-bottom: 3%;
 
+    >h4,
     >p,
     >ul,
     >table {
@@ -38,16 +44,18 @@ p {
     background-color: $light-blue;
 }
 
-h2 {
+h1 {
     padding-bottom: 3%;
     font-size: 2.8em;
+    font-weight: 700;
     margin: 0;
     color: $dark-blue;
 }
 
-h3 {
+h2 {
     color: $dark-red;
     margin: 0;
+    font-weight: 500;
     text-align: center;
     padding: 3% 0;
 }
@@ -55,120 +63,68 @@ h3 {
 h4 {
     padding-bottom: 3%;
     font-size: 1.3rem;
+    font-weight: 500;
 }
 
-// Navigation
+/*
+██   ██ ███████  █████  ██████  ███████ ██████  
+██   ██ ██      ██   ██ ██   ██ ██      ██   ██ 
+███████ █████   ███████ ██   ██ █████   ██████  
+██   ██ ██      ██   ██ ██   ██ ██      ██   ██ 
+██   ██ ███████ ██   ██ ██████  ███████ ██   ██ 
+*/
 
 #navig {
-    background-color: $dark-blue;
     padding-left: 7%;
     padding-right: 6%;
+    background-color: $dark-blue;
 }
 
-// Tailles
-$hauteur-navbar: 80px;
-$largeur-logo: 200px;
+.navbar-brand,
+.nav-link {
+    color: $bg-body;
 
-// Navbar
-#navig {
-  height: $hauteur-navbar;
-  background-color: transparent; // Navbar transparente par défaut
-  font-family: $dark-blue;
-  padding-left: 7%;
-  padding-right: 6%;
-  position: absolute;
-  width: 100%;
-  z-index: 3;
-  transition: background-color 0.3s ease-in-out;
-  top: 0;
-  position: fixed;
-  
-  .navbar-brand {
-    color: $dark-red;
+    &:hover,
+    &:focus {
+        color: $light-blue;
+    }
+}
+
+.navbar-brand {
     font-size: 2rem;
     font-weight: bold;
-    width: $largeur-logo;
-    
-    &:hover, &:focus {
-      color: $dark-blue;
-    }
-  }
-  
-  .navbar-nav {
-    align-items: center;
-    margin-left: auto;
-    font-weight: 500;
-    
-    .nav-link {
-      color: $dark-red;
-      font-size: 1.2rem;
-      margin-left: 2rem;
-      
-      &:hover, &:focus {
-        color: $dark-blue;
-      }
-      
-      &.active {
-        font-weight: bold;
-        color: $dark-blue;
-      }
-    }
-    
-    .dropdown-toggle::after {
-      display: none;
-    }
-    
-    .dropdown-menu {
-      background-color: $dark-blue;
-      border: none;
-      
-      .dropdown-item {
-        color: $bg-body;
-        font-size: 1.2rem;
-        
-        &:hover, &:focus {
-          color: $bg-body;
-          background-color: darken($dark-blue, 10%);
-        }
-      }
-    }
-  }
-  
-  // Navbar bleue après scroll
-  &.scroll {
-    background-color: $dark-blue;
-    
-    .navbar-brand,
-    .nav-link {
-      color: $bg-body;
-      
-      &:hover, &:focus {
-        color: $light-blue;
-      }
-    }
-    
-    .dropdown-menu {
-      background-color: $dark-blue;
-      
-      .dropdown-item {
-        color: $bg-body;
-        
-        &:hover, &:focus {
-          color: $bg-body;
-          background-color: darken($dark-blue, 10%);
-        }
-      }
-    }
-  }
 }
 
+.nav-link {
+    font-size: 1.2rem;
+}
 
-// Bannière
+.dropdown-menu {
+    background-color: $dark-blue;
+
+    .dropdown-item {
+        color: $bg-body;
+
+        &:hover,
+        &:focus {
+            color: $bg-body;
+            background-color: darken($dark-blue, 10%);
+        }
+    }
+}
+
+/*
+██████   █████  ███    ██ ███    ██ ██ ███████ ██████  ███████ 
+██   ██ ██   ██ ████   ██ ████   ██ ██ ██      ██   ██ ██      
+██████  ███████ ██ ██  ██ ██ ██  ██ ██ █████   ██████  █████   
+██   ██ ██   ██ ██  ██ ██ ██  ██ ██ ██ ██      ██   ██ ██      
+██████  ██   ██ ██   ████ ██   ████ ██ ███████ ██   ██ ███████ 
+*/
 
 #banner {
     display: flex;
     position: relative;
-    height: 97vh;
+    height: 85vh;
 
     #imgbanner {
         background-size: cover;
@@ -177,7 +133,7 @@ $largeur-logo: 200px;
         height: 100%;
         position: absolute;
         object-fit: cover;
-        z-index: 1;
+        z-index: 0;
         opacity: 0.45;
     }
 
@@ -188,11 +144,17 @@ $largeur-logo: 200px;
         align-self: center;
         margin: 0 8%;
         position: absolute;
-        z-index: 2;
+        z-index: 1;
     }
 }
 
-// Parallax
+/*
+██████   █████  ██████   █████  ██      ██       █████  ██   ██ 
+██   ██ ██   ██ ██   ██ ██   ██ ██      ██      ██   ██  ██ ██  
+██████  ███████ ██████  ███████ ██      ██      ███████   ███   
+██      ██   ██ ██   ██ ██   ██ ██      ██      ██   ██  ██ ██  
+██      ██   ██ ██   ██ ██   ██ ███████ ███████ ██   ██ ██   ██ 
+*/
 
 .parallax {
     position: relative;
@@ -216,9 +178,78 @@ $largeur-logo: 200px;
 }
 
 /*
-======================================
-EXPERTISE
-======================================
+███    ███ ██ ███████ ███████ ██  ██████  ███    ██ 
+████  ████ ██ ██      ██      ██ ██    ██ ████   ██ 
+██ ████ ██ ██ ███████ ███████ ██ ██    ██ ██ ██  ██ 
+██  ██  ██ ██      ██      ██ ██ ██    ██ ██  ██ ██ 
+██      ██ ██ ███████ ███████ ██  ██████  ██   ████ 
+*/
+
+.missions {
+    margin: 0 8% 2% 8%;
+    display: flex;
+    flex-direction: column;
+
+    .oneMission {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5%;
+        height: 300px;
+
+        /* hauteur ajoutée */
+        .textMission,
+        .imgMission {
+            flex: 1 1 50%;
+        }
+
+        .imgMission {
+            height: 100%;
+
+            img {
+                height: 90%;
+                width: 100%;
+                object-fit: cover;
+
+                &:hover {
+                    filter: grayscale(1);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        .oneMission:first-of-type {
+            flex-direction: column;
+        }
+        .oneMission:last-of-type {
+            flex-direction: column-reverse;
+        }
+        .oneMission {
+            height: auto;
+
+            /* Hauteur auto pour s'adapter au contenu */
+            .textMission,
+            .imgMission {
+                flex: none;
+                width: 100%;
+            }
+
+            .imgMission {
+                height: 300px;
+            }
+        }
+    }
+}
+
+
+
+/*
+███████ ██   ██ ██████  ███████ ██████  ████████ ██ ███████ ███████ 
+██       ██ ██  ██   ██ ██      ██   ██    ██    ██ ██      ██      
+█████     ███   ██████  █████   ██████     ██    ██ ███████ █████   
+██       ██ ██  ██      ██      ██   ██    ██    ██      ██ ██      
+███████ ██   ██ ██      ███████ ██   ██    ██    ██ ███████ ███████ 
 */
 
 // Gouttes d'eau correspondant aux 3 équipes
@@ -313,7 +344,7 @@ EXPERTISE
                 font-size: 1.5em;
             }
 
-            a,
+            // Bouton
             .bouton {
                 position: relative;
                 padding: 0 15px;
@@ -321,88 +352,129 @@ EXPERTISE
                 text-decoration: none;
                 color: #fff;
                 border-radius: 25px;
-                opacity: 0.75;
+                opacity: 1;
                 transition: 0.3s;
                 border: none;
-            }
 
-            a:hover,
-            .bouton:hover {
-                opacity: 1;
-                color: #fff;
+                &:hover {
+                    opacity: 0.75;
+                    color: #fff;
+                }
             }
         }
     }
 }
 
 /*
-======================================
-EN ATTENDANT
-======================================
+███████ ███    ██      █████  ████████ ████████ ███████ ███    ██ ██████   █████  ███    ██ ████████ 
+██      ████   ██     ██   ██    ██       ██    ██      ████   ██ ██   ██ ██   ██ ████   ██    ██    
+█████   ██ ██  ██     ███████    ██       ██    █████   ██ ██  ██ ██   ██ ███████ ██ ██  ██    ██    
+██      ██  ██ ██     ██   ██    ██       ██    ██      ██  ██ ██ ██   ██ ██   ██ ██  ██ ██    ██    
+███████ ██   ████     ██   ██    ██       ██    ███████ ██   ████ ██████  ██   ██ ██   ████    ██    
 */
 
 #groupes {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-}
-
-#anim {
-    width: 100%;
-    height: 50vh;
-    background-color: $bg-body;
-    margin-right: 8%;
-}
-
-.aQui {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 45vw;
     margin: 0 8%;
-}
+    gap: 5%;
+  
+    .aQui {
+      flex-basis: 40%;
 
-.donneurs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.grpDonneur {
-    background-color: $dark-red;
-    color: $bg-body;
-    height: 5%;
-    width: 5%;
-    text-align: center;
-    border: none;
-}
-
-.receveurs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.grpReceveur {
-    border: 1px solid $dark-red;
-    color: $dark-blue;
-    height: 50px;
-    width: 50px;
-    text-align: center;
-
-    &:hover {
-        background-color: yellow;
+      .blue{
+        font-weight: bold;
+        color: $dark-blue;
+        // background-color: $dark-blue;
+      }
+      .red{
+        font-weight: bold;
+        color: $dark-red;
+        // background-color: #f36161;
+      }
     }
-}
-
+  
+    #anim {
+      flex-basis: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $bg-body;
+      border-radius: 10px;
+  
+      .donneurs {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+  
+        .grpDonneur {
+          margin: 10px;
+          margin-top: 30px;
+          font-size: 1.2rem;
+          padding: 10px;
+          border-radius: 5px;
+          background-color: $dark-blue;
+          color: $bg-body;
+          border: none;
+          cursor: pointer;
+          &:hover {
+            background-color: $light-blue;
+            color: $dark-blue;
+          }
+        }
+      }
+  
+      .receveurs {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+  
+        .grpReceveur {
+          margin: 10px;
+          font-size: 1.2rem;
+          padding: 10px;
+          border-radius: 5px;
+          background-color: #f36161;
+          color: black;
+        }
+      }
+  
+      #reset {
+        margin: 30px;
+        font-size: 1.2rem;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: gray;
+        color: white;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          background-color: #a6a6a6;
+        }
+      }
+    }
+    
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      
+      .aQui,
+      #anim {
+        flex-basis: 100%;
+      }
+    }
+  }
 
 /*
-======================================
-ILS NOUS SOUTIENNENT
-======================================
+██████   █████  ██████  ████████ ███████ ███    ██  █████  ██ ██████  ███████ ███████ 
+██   ██ ██   ██ ██   ██    ██    ██      ████   ██ ██   ██ ██ ██   ██ ██      ██      
+██████  ███████ ██████     ██    █████   ██ ██  ██ ███████ ██ ██████  █████   ███████ 
+██      ██   ██ ██   ██    ██    ██      ██  ██ ██ ██   ██ ██ ██   ██ ██           ██ 
+██      ██   ██ ██   ██    ██    ███████ ██   ████ ██   ██ ██ ██   ██ ███████ ███████ 
 */
 
 // Description de l'animation
-@keyframes scroll {
+@keyframes scrolling {
     0% {
         transform: translateX(0);
     }
@@ -448,7 +520,7 @@ ILS NOUS SOUTIENNENT
 
     // Animation du slider : rotation des images en boucle
     .slide-track {
-        animation: scroll 20s linear infinite;
+        animation: scrolling 20s linear infinite;
         display: flex;
         width: calc(250px * 10);
     }
@@ -467,20 +539,25 @@ ILS NOUS SOUTIENNENT
 }
 
 /*
-======================================
-FOOTER
-======================================
+███████  ██████   ██████  ████████ ███████ ██████  
+██      ██    ██ ██    ██    ██    ██      ██   ██ 
+█████   ██    ██ ██    ██    ██    █████   ██████  
+██      ██    ██ ██    ██    ██    ██      ██   ██ 
+██       ██████   ██████     ██    ███████ ██   ██
 */
 
-#copyr {
+#footer {
     text-align: center;
     padding: 1.5% 0;
 }
 
 /*
-======================================
-PAGE EQUIPE
-======================================
+██████   █████   ██████  ███████     ███████  ██████  ██    ██ ██ ██████  ███████ 
+██   ██ ██   ██ ██       ██          ██      ██    ██ ██    ██ ██ ██   ██ ██      
+██████  ███████ ██   ███ █████       █████   ██    ██ ██    ██ ██ ██████  █████   
+██      ██   ██ ██    ██ ██          ██      ██ ▄▄ ██ ██    ██ ██ ██      ██      
+██      ██   ██  ██████  ███████     ███████  ██████   ██████  ██ ██      ███████ 
+                                                 ▀▀                                
 */
 
 .banniere {
@@ -539,20 +616,49 @@ PAGE EQUIPE
 }
 
 /*
-======================================
-PAGE CONTACT
-======================================
+██████   █████   ██████  ███████      ██████  ██████  ███    ██ ████████  █████   ██████ ████████ 
+██   ██ ██   ██ ██       ██          ██      ██    ██ ████   ██    ██    ██   ██ ██         ██    
+██████  ███████ ██   ███ █████       ██      ██    ██ ██ ██  ██    ██    ███████ ██         ██    
+██      ██   ██ ██    ██ ██          ██      ██    ██ ██  ██ ██    ██    ██   ██ ██         ██    
+██      ██   ██  ██████  ███████      ██████  ██████  ██   ████    ██    ██   ██  ██████    ██    
 */
 
 #titreContact {
-    padding: 2% 0;
+    padding: 2% 0%;
+}
+
+.star {
+    color: $dark-red;
+}
+
+.btn-primary {
+    background-color: $dark-blue;
+    border: none;
+
+    &:hover {
+        background-color: $light-blue;
+    }
 }
 
 .contact {
     display: flex;
-    justify-content: center;
-}
+    flex-direction: row;
+    padding: 2%;
+    gap: 5%;
+    background: rgb(193, 232, 232);
+    background: radial-gradient(circle, rgba(193, 232, 232, 1), rgba(239, 240, 244, 1));
+    
+    .formulaire, #map {
+        flex: 1 1 50%;
+    }
 
-.star {
-    color: red;
+    @media (max-width: 992px) {
+        flex-direction: column;
+        .formulaire, #map {
+            width: 100%;
+        }
+        .formulaire {
+            padding-bottom: 3%;
+        }
+    }
 }

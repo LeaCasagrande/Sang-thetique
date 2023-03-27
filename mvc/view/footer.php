@@ -1,5 +1,5 @@
   <!-- Footer -->
-  <div id="copyr">
+  <div id="footer">
     <span>Sang-thétique, 2022</span>
   </div>
 
