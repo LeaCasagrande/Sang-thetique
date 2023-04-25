@@ -21,7 +21,7 @@
                 </div>
                 <label for="sujet" class="form-label">Sujet de votre demande <span class="star">*</span></label>
                 <select class="form-select mb-2" aria-label="Default select example" name="sujet">
-                    <option selected>Veuillez sélectionner une option</option>
+                    <option selected disabled>Veuillez sélectionner une option</option>
                     <option value="1">Demande d'informations</option>
                     <option value="2">Candidature</option>
                     <option value="3">Autre</option>

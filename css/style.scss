@@ -7,6 +7,12 @@
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+// @font-face {
+// 	font-family: 'Comfortaa';
+// 	src: url(‘../font/Comfortaa-VariableFont_wght.ttf’) format(‘truetype’);
+// }
 
 // Variables de couleurs
 $dark-red: #850606;
@@ -46,7 +52,8 @@ p {
 
 h1 {
     padding-bottom: 3%;
-    font-size: 2.8em;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 3em;
     font-weight: 700;
     margin: 0;
     color: $dark-blue;
@@ -55,6 +62,7 @@ h1 {
 h2 {
     color: $dark-red;
     margin: 0;
+    font-family: 'Comfortaa', sans-serif;
     font-weight: 500;
     text-align: center;
     padding: 3% 0;
@@ -64,6 +72,10 @@ h4 {
     padding-bottom: 3%;
     font-size: 1.3rem;
     font-weight: 500;
+}
+
+a {
+    font-family: 'Comfortaa';
 }
 
 /*
@@ -91,7 +103,7 @@ h4 {
 }
 
 .navbar-brand {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
