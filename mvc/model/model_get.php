@@ -68,7 +68,7 @@ function getProjectsByTeam($bdd,$id_equipe)
 {
     try {
         $req = $bdd->prepare(
-            "SELECT projets.titre_projet, projets.desc_projet
+            "SELECT projets.id_projet, projets.titre_projet, projets.desc_projet
                 from projets
                 inner join equipes on projets.id_equipe = equipes.id_equipe
                 where equipes.id_equipe = :id_equipe"

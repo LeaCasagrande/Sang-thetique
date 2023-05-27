@@ -1,8 +1,8 @@
 <?php
-// On inclue la vue du header
-include('../view/header.php');
 // On se connecte à la BDD
 include('../model/connect.php');
+// On inclue la vue du header
+include('../view/header.php');
 // On inclue le modèle contenant les fonctions GET
 include('../model/model_get.php');
 

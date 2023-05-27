@@ -35,6 +35,10 @@ p {
     text-align: justify;
 }
 
+.paragraphe {
+    padding-bottom: 15px;
+}
+
 .part {
     padding-bottom: 3%;
 
@@ -42,7 +46,11 @@ p {
     >p,
     >ul,
     >table {
-        margin: 0 8%;
+        margin-inline: 8%;
+    }
+
+    li {
+        margin-bottom: 15px;
     }
 }
 
@@ -136,7 +144,7 @@ a {
 #banner {
     display: flex;
     position: relative;
-    height: 85vh;
+    height: 92vh;
 
     #imgbanner {
         background-size: cover;
@@ -154,9 +162,22 @@ a {
         flex-direction: column;
         justify-content: center;
         align-self: center;
-        margin: 0 8%;
+        margin-inline: 8%;
         position: absolute;
         z-index: 1;
+    }
+}
+
+.scroll-icon {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #068585;
+
+    i {
+        font-size: 30px;
     }
 }
 
@@ -234,9 +255,11 @@ a {
         .oneMission:first-of-type {
             flex-direction: column;
         }
+
         .oneMission:last-of-type {
             flex-direction: column-reverse;
         }
+
         .oneMission {
             height: auto;
 
@@ -391,91 +414,91 @@ a {
     align-items: center;
     margin: 0 8%;
     gap: 5%;
-  
-    .aQui {
-      flex-basis: 40%;
 
-      .blue{
-        font-weight: bold;
-        color: $dark-blue;
-        // background-color: $dark-blue;
-      }
-      .red{
-        font-weight: bold;
-        color: $dark-red;
-        // background-color: #f36161;
-      }
-    }
-  
-    #anim {
-      flex-basis: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-color: $bg-body;
-      border-radius: 10px;
-  
-      .donneurs {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-  
-        .grpDonneur {
-          margin: 10px;
-          margin-top: 30px;
-          font-size: 1.2rem;
-          padding: 10px;
-          border-radius: 5px;
-          background-color: $dark-blue;
-          color: $bg-body;
-          border: none;
-          cursor: pointer;
-          &:hover {
-            background-color: $light-blue;
+    .aQui {
+        flex-basis: 40%;
+
+        .blue {
+            font-weight: bold;
             color: $dark-blue;
-          }
         }
-      }
-  
-      .receveurs {
+
+        .red {
+            font-weight: bold;
+            color: $dark-red;
+        }
+    }
+
+    #anim {
+        flex-basis: 50%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        margin-top: 30px;
-  
-        .grpReceveur {
-          margin: 10px;
-          font-size: 1.2rem;
-          padding: 10px;
-          border-radius: 5px;
-          background-color: #f36161;
-          color: black;
+        background-color: $bg-body;
+        border-radius: 10px;
+
+        .grpDonneur, .grpReceveur {
+            margin: 10px;
+            font-size: 1.2rem;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
         }
-      }
-  
-      #reset {
-        margin: 30px;
-        font-size: 1.2rem;
-        padding: 10px;
-        border-radius: 5px;
-        background-color: gray;
-        color: white;
-        border: none;
-        cursor: pointer;
-        &:hover {
-          background-color: #a6a6a6;
+
+        .donneurs {
+            display: flex;
+            justify-content: center;
+            margin: 15px;
+
+            .grpDonneur {
+                background-color: $dark-blue;
+                color: $bg-body;
+
+                &:hover {
+                    background-color: $light-blue;
+                    color: $dark-blue;
+                    cursor: pointer;
+                }
+            }
         }
-      }
+
+        .receveurs {
+            display: flex;
+            justify-content: center;
+            margin: 15px;
+
+            .grpReceveur {
+                background-color: #f36161;
+                color: black;
+                cursor: default;
+            }
+        }
+
+        #reset {
+            margin: 10px 30px 30px 30px;
+            font-size: 1.2rem;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: gray;
+            color: white;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #a6a6a6;
+            }
+        }
     }
-    
+
     @media screen and (max-width: 992px) {
-      flex-direction: column;
-      
-      .aQui,
-      #anim {
-        flex-basis: 100%;
-      }
+        flex-direction: column;
+
+        .aQui,
+        #anim {
+            flex-basis: 100%;
+        }
     }
-  }
+}
 
 /*
 ██████   █████  ██████  ████████ ███████ ███    ██  █████  ██ ██████  ███████ ███████ 
@@ -602,6 +625,10 @@ a {
     margin: 0 8%;
 }
 
+.accordion-header {
+    padding-bottom: 0;
+}
+
 .cards {
     display: inline-grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -659,16 +686,20 @@ a {
     gap: 5%;
     background: rgb(193, 232, 232);
     background: radial-gradient(circle, rgba(193, 232, 232, 1), rgba(239, 240, 244, 1));
-    
-    .formulaire, #map {
+
+    .formulaire,
+    #map {
         flex: 1 1 50%;
     }
 
     @media (max-width: 992px) {
         flex-direction: column;
-        .formulaire, #map {
+
+        .formulaire,
+        #map {
             width: 100%;
         }
+
         .formulaire {
             padding-bottom: 3%;
         }

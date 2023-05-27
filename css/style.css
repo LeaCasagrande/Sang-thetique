@@ -23,6 +23,10 @@ p {
   text-align: justify;
 }
 
+.paragraphe {
+  padding-bottom: 15px;
+}
+
 .part {
   padding-bottom: 3%;
 }
@@ -30,7 +34,10 @@ p {
 .part > p,
 .part > ul,
 .part > table {
-  margin: 0 8%;
+  margin-inline: 8%;
+}
+.part li {
+  margin-bottom: 15px;
 }
 
 .fonce {
@@ -118,7 +125,7 @@ a {
 #banner {
   display: flex;
   position: relative;
-  height: 85vh;
+  height: 92vh;
 }
 #banner #imgbanner {
   background-size: cover;
@@ -136,9 +143,21 @@ a {
   flex-direction: column;
   justify-content: center;
   align-self: center;
-  margin: 0 8%;
+  margin-inline: 8%;
   position: absolute;
   z-index: 1;
+}
+
+.scroll-icon {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #068585;
+}
+.scroll-icon i {
+  font-size: 30px;
 }
 
 /*
@@ -355,41 +374,39 @@ a {
   background-color: #eff0f4;
   border-radius: 10px;
 }
+#groupes #anim .grpDonneur, #groupes #anim .grpReceveur {
+  margin: 10px;
+  font-size: 1.2rem;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
 #groupes #anim .donneurs {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  margin: 15px;
 }
 #groupes #anim .donneurs .grpDonneur {
-  margin: 10px;
-  margin-top: 30px;
-  font-size: 1.2rem;
-  padding: 10px;
-  border-radius: 5px;
   background-color: #068585;
   color: #eff0f4;
-  border: none;
-  cursor: pointer;
 }
 #groupes #anim .donneurs .grpDonneur:hover {
   background-color: #c1e8e8;
   color: #068585;
+  cursor: pointer;
 }
 #groupes #anim .receveurs {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin: 15px;
 }
 #groupes #anim .receveurs .grpReceveur {
-  margin: 10px;
-  font-size: 1.2rem;
-  padding: 10px;
-  border-radius: 5px;
   background-color: #f36161;
   color: black;
+  cursor: default;
 }
 #groupes #anim #reset {
-  margin: 30px;
+  margin: 10px 30px 30px 30px;
   font-size: 1.2rem;
   padding: 10px;
   border-radius: 5px;
@@ -517,6 +534,10 @@ a {
   margin: 0 8%;
 }
 
+.accordion-header {
+  padding-bottom: 0;
+}
+
 .cards {
   display: inline-grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -569,14 +590,16 @@ a {
   background: rgb(193, 232, 232);
   background: radial-gradient(circle, rgb(193, 232, 232), rgb(239, 240, 244));
 }
-.contact .formulaire, .contact #map {
+.contact .formulaire,
+.contact #map {
   flex: 1 1 50%;
 }
 @media (max-width: 992px) {
   .contact {
     flex-direction: column;
   }
-  .contact .formulaire, .contact #map {
+  .contact .formulaire,
+  .contact #map {
     width: 100%;
   }
   .contact .formulaire {

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../../bootstrap-5.2.3-dist/css/bootstrap.min.css">
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Sang-thétique</title>
 
   <!-- favicon -->
@@ -25,8 +26,7 @@
   <nav class="navbar sticky-top navbar-expand-lg" id="navig">
     <div class="container-fluid">
       <a class="navbar-brand" href="controller_accueil.php">Sang-thétique</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -36,14 +36,17 @@
             <a class="nav-link mx-2" aria-current="page" href="controller_accueil.php#mission">Mission</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Equipes
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="controller_equipe.php?equipe=1">Equipe 1 : Globules rouges</a></li>
-              <li><a class="dropdown-item" href="controller_equipe.php?equipe=2">Equipe 2 : Globules blancs</a></li>
-              <li><a class="dropdown-item" href="controller_equipe.php?equipe=3">Equipe 3 : Plasma et plaquettes</a></li>
+              <?php
+              $requete = $bdd->query('SELECT * FROM equipes');
+              while ($equipe = $requete->fetch()) {
+                echo '<li><a class="dropdown-item" href="controller_equipe.php?equipe=' . $equipe['id_equipe'] . '">' . "Equipe ". $equipe['id_equipe'] ." : ". $equipe['nom_equipe'] . '</a></li>';
+              }
+              $requete->closeCursor();
+              ?>
             </ul>
           </li>
           <li class="nav-item">

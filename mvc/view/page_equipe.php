@@ -7,12 +7,30 @@
 <!-- Projet -->
 <div class="part">
     <h2>Projets de recherche</h2>
-    <?php foreach ($projets as $projet) : ?>
-        <div class="projet">
-            <h4><?php echo $projet['titre_projet'] ?></h4>
-            <p><?php echo $projet['desc_projet'] ?></p>
+    <div class="projet">
+        <div class="accordion" id="accordion">
+            <?php foreach ($projets as $projet) : ?>
+                <div class="accordion-item">
+                    <h4 class="accordion-header" id="heading-<?php echo $projet['id_projet']; ?>">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-<?php echo $projet['id_projet']; ?>" aria-expanded="false" aria-controls="collapse-<?php echo $projet['id_projet']; ?>">
+                            <?php echo $projet['titre_projet']; ?>
+                        </button>
+                    </h4>
+                    <div id="collapse-<?php echo $projet['id_projet']; ?>" class="accordion-collapse collapse" aria-labelledby="heading-<?php echo $projet['id_projet']; ?>">
+                        <div class="accordion-body">
+                            <?php
+                            $description = $projet['desc_projet'];
+                            $paragraphes = explode("|||", $description);
+                            foreach ($paragraphes as $paragraphe) {
+                                echo "<p>$paragraphe</p>";
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach ?>
         </div>
-    <?php endforeach ?>
+    </div>
 </div>
 
 <!-- Membres -->
