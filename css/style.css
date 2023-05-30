@@ -41,7 +41,7 @@ p {
 }
 
 .fonce {
-  background-color: #c1e8e8;
+  background-color: #d5e0ed;
 }
 
 h1 {
@@ -50,7 +50,7 @@ h1 {
   font-size: 3em;
   font-weight: 700;
   margin: 0;
-  color: #068585;
+  color: #066385;
 }
 
 h2 {
@@ -63,7 +63,7 @@ h2 {
 }
 
 h4 {
-  padding-bottom: 3%;
+  padding-bottom: 1.5rem;
   font-size: 1.3rem;
   font-weight: 500;
 }
@@ -82,7 +82,7 @@ a {
 #navig {
   padding-left: 7%;
   padding-right: 6%;
-  background-color: #068585;
+  background-color: #066385;
 }
 
 .navbar-brand,
@@ -92,7 +92,7 @@ a {
 .navbar-brand:hover, .navbar-brand:focus,
 .nav-link:hover,
 .nav-link:focus {
-  color: #c1e8e8;
+  color: #d5e0ed;
 }
 
 .navbar-brand {
@@ -105,14 +105,14 @@ a {
 }
 
 .dropdown-menu {
-  background-color: #068585;
+  background-color: #066385;
 }
 .dropdown-menu .dropdown-item {
   color: #eff0f4;
 }
 .dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
   color: #eff0f4;
-  background-color: #045454;
+  background-color: #043f54;
 }
 
 /*
@@ -154,9 +154,11 @@ a {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  color: #068585;
 }
-.scroll-icon i {
+.scroll-icon a {
+  color: #066385;
+}
+.scroll-icon a i {
   font-size: 30px;
 }
 
@@ -360,17 +362,18 @@ a {
 }
 #groupes .aQui .blue {
   font-weight: bold;
-  color: #068585;
+  color: #066385;
 }
 #groupes .aQui .red {
   font-weight: bold;
   color: #850606;
 }
 #groupes #anim {
-  flex-basis: 50%;
+  flex-basis: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: #eff0f4;
   border-radius: 10px;
 }
@@ -387,12 +390,12 @@ a {
   margin: 15px;
 }
 #groupes #anim .donneurs .grpDonneur {
-  background-color: #068585;
+  background-color: #066385;
   color: #eff0f4;
 }
 #groupes #anim .donneurs .grpDonneur:hover {
-  background-color: #c1e8e8;
-  color: #068585;
+  background-color: #d5e0ed;
+  color: #066385;
   cursor: pointer;
 }
 #groupes #anim .receveurs {
@@ -406,6 +409,7 @@ a {
   cursor: default;
 }
 #groupes #anim #reset {
+  justify-content: center;
   margin: 10px 30px 30px 30px;
   font-size: 1.2rem;
   padding: 10px;
@@ -414,6 +418,7 @@ a {
   color: white;
   border: none;
   cursor: pointer;
+  width: 40%;
 }
 #groupes #anim #reset:hover {
   background-color: #a6a6a6;
@@ -575,11 +580,11 @@ a {
 }
 
 .btn-primary {
-  background-color: #068585;
+  background-color: #066385;
   border: none;
 }
 .btn-primary:hover {
-  background-color: #c1e8e8;
+  background-color: #d5e0ed;
 }
 
 .contact {

@@ -7,7 +7,7 @@
         <h4>Ensemble, repensons la médecine du sang pour un avenir plus radieux</h4>
     </div>
     <div class="scroll-icon">
-        <i class="fa-solid fa-arrow-down fa-bounce"></i>
+        <a href="controller_accueil.php#mission"><i class="fa-solid fa-arrow-down fa-bounce"></i></a>
     </div>
 </div>
 
@@ -41,7 +41,7 @@
     <ul style="list-style-type: '\1FA78';">
         <li>Culture de cellules souches : Les cellules souches peuvent être cultivées en laboratoire et différenciées en différents types de cellules sanguines, telles que les globules rouges et les plaquettes.</li>
         <li>Thérapie génique : Les anomalies génétiques associées à des troubles sanguins peuvent être corrigées par thérapie génique en utilisant des vecteurs viraux pour introduire de nouveaux gènes fonctionnels dans les cellules souches ou les cellules sanguines.</li>
-        <li>Bioprinting : La bioprinting peut être utilisée pour produire des structures sanguines en 3D en utilisant des bio-imprimantes pour déposer des cellules et des matériaux biologiques sur un substrat.</li>
+        <li>Bioimpression : La bioimpression 3D peut être utilisée pour produire des structures sanguines en 3D en utilisant des bio-imprimantes pour déposer des cellules et des matériaux biologiques sur un substrat.</li>
         <li>Ingénierie tissulaire : Les techniques d'ingénierie tissulaire peuvent être utilisées pour améliorer la qualité et la fonction des produits sanguins synthétiques en utilisant des matériaux biocompatibles pour soutenir la croissance et la maturation des cellules sanguines produites.</li>
     </ul>
 
@@ -59,7 +59,7 @@
 
     <div class="contain">
         <div class="drop">
-            <div class="content">
+            <div class="content">D
                 <h2>01</h2>
                 <p>Globules rouges</p>
                 <a class="bouton" href="controller_equipe.php?equipe=1">En savoir plus</a>

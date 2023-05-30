@@ -31,7 +31,6 @@
             <?php endforeach ?>
         </div>
     </div>
-</div>
 
 <!-- Membres -->
 <div class="part fonce">
