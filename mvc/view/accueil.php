@@ -59,7 +59,7 @@
 
     <div class="contain">
         <div class="drop">
-            <div class="content">D
+            <div class="content">
                 <h2>01</h2>
                 <p>Globules rouges</p>
                 <a class="bouton" href="controller_equipe.php?equipe=1">En savoir plus</a>

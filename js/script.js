@@ -27,8 +27,8 @@ donneurs.forEach(function(donneur) {
     });
 
     // Changer le style du bouton cliqué
-    this.style.backgroundColor = '#c1e8e8';
-    this.style.color = '#068585';
+    this.style.backgroundColor = '#d5e0ed';
+    this.style.color = '#066385';
 
     // Appel de la fonction qui met en évidence les compatibilités
     highlightCompatibilite(this);
