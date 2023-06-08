@@ -61,3 +61,26 @@ reset.addEventListener("click", function() {
     donneur.style.color = '';
   });
 });
+
+// Expand Notre mission
+
+const panels = document.querySelectorAll('.panel');
+
+panels.forEach(panel => {
+    panel.addEventListener('click', () => {
+        removeActiveClasses();
+        panel.classList.add('active');
+    })
+})
+
+function removeActiveClasses(){
+    panels.forEach(panel => {
+        panel.classList.remove('active');
+    })
+}
+
+// Initialisation de l'annuaire
+
+$(document).ready(function() {
+  $('#mytable').DataTable();
+});

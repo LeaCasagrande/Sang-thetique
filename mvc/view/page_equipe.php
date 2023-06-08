@@ -32,18 +32,22 @@
         </div>
     </div>
 
-<!-- Membres -->
-<div class="part fonce">
-    <h2>Membres</h2>
-    <div class="container-fluid cards">
-        <?php foreach ($membres as $data) : ?>
-            <div class="card" style="width: 15rem;">
-                <img src="../../ressources/<?php echo $data['url_image'] ?>" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo $data['prenom_personnel'] . " " . $data['nom_personnel'] ?></h5>
-                    <p class="card-text"><?php echo $data['nom_poste'] ?></p>
+    <!-- Membres -->
+    <div class="part fonce">
+        <h2>Membres</h2>
+        <div class="container-fluid cards">
+            <?php foreach ($membres as $data) : ?>
+                <div class="card" style="width: 15rem;">
+                    <?php if(!empty($data['id_image'])) { ?>
+                        <img src="../../ressources/<?php echo $data['url_image'] ?>" class="card-img-top" alt="...">
+                    <?php } else { ?>
+                        <img src="../../ressources/avatar.png" class="card-img-top" alt="...">
+                    <?php } ?>
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $data['prenom_personnel'] . " " . $data['nom_personnel'] ?></h5>
+                        <p class="card-text"><?php echo $data['nom_poste'] ?></p>
+                    </div>
                 </div>
-            </div>
-        <?php endforeach ?>
+            <?php endforeach; ?>
+        </div>
     </div>
-</div>

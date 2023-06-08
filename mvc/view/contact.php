@@ -1,6 +1,11 @@
-<!-- <img class="bgContact" src="../../ressources/pexels-edward-jenner-4031440.jpg" alt=""> -->
-<div>
-    <h2 id="titreContact">Nous contacter</h2>
+<!-- Bannière  -->
+<div class="banniere">
+    <img class="imgequipe" src="../../ressources/clavier.jpg" alt="">
+    <h1 class="nomequipe">Contact</h1>
+</div>
+
+<!-- Formulaire et carte -->
+<div class="part">
 
     <div class="container contact">
         <div class="formulaire">
@@ -30,11 +35,6 @@
                     <label for="message" class="form-label">Votre message <span class="star">*</span></label>
                     <textarea class="form-control" name="message" rows="5" required></textarea>
                 </div>
-                <!-- <div class="mb-3">
-                    <label for="fichier" class="form-label">Votre fichier</label>
-                    <input class="form-control" type="file" name="fichier">
-                </div> -->
-
                 <button type="button submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMessage">Envoyer</button>
             </form>
         </div>

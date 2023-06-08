@@ -4,9 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- bootstrap -->
   <link rel="stylesheet" href="../../bootstrap-5.2.3-dist/css/bootstrap.min.css">
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+
+  <!-- datatables -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+
+  <!-- style personnalise -->
   <link rel="stylesheet" href="../../css/style.css">
+
+  <!-- Icones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Sang-thétique</title>
 
@@ -48,6 +56,9 @@
               $requete->closeCursor();
               ?>
             </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="controller_annuaire.php">Annuaire</a>
           </li>
           <li class="nav-item">
             <a class="nav-link mx-2" href="controller_accueil.php#partenaires">Partenaires</a>

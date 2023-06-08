@@ -11,7 +11,7 @@
 
 // Variables de couleurs
 $dark-red: #850606;
-$dark-blue: #066385;
+$dark-blue: #06475e;
 $light-blue: #d5e0ed;
 $bg-body: #eff0f4;
 
@@ -172,7 +172,7 @@ a {
 
     a {
         color: $dark-blue;
-       
+
         i {
             font-size: 30px;
         }
@@ -434,44 +434,51 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
         background-color: $bg-body;
         border-radius: 10px;
 
-        .grpDonneur, .grpReceveur {
+        .compat {
+            display: flex;
+            flex-direction: column;
+
+            .donneurs {
+                display: flex;
+                justify-content: center;
+                margin: 15px;
+    
+                .grpDonneur {
+                    background-color: $dark-blue;
+                    color: $bg-body;
+    
+                    &:hover {
+                        background-color: $light-blue;
+                        color: $dark-blue;
+                        cursor: pointer;
+                    }
+                }
+            }
+    
+            .receveurs {
+                display: flex;
+                justify-content: center;
+                margin: 15px;
+    
+                .grpReceveur {
+                    background-color: #fca4a4;
+                    color: black;
+                    cursor: default;
+                }
+            }
+        }
+
+        .grpDonneur,
+        .grpReceveur {
             margin: 10px;
             font-size: 1.2rem;
             padding: 10px;
             border: none;
             border-radius: 5px;
-        }
-
-        .donneurs {
-            display: flex;
-            justify-content: center;
-            margin: 15px;
-
-            .grpDonneur {
-                background-color: $dark-blue;
-                color: $bg-body;
-
-                &:hover {
-                    background-color: $light-blue;
-                    color: $dark-blue;
-                    cursor: pointer;
-                }
-            }
-        }
-
-        .receveurs {
-            display: flex;
-            justify-content: center;
-            margin: 15px;
-
-            .grpReceveur {
-                background-color: #f36161;
-                color: black;
-                cursor: default;
-            }
         }
 
         #reset {
@@ -500,6 +507,26 @@ a {
             flex-basis: 100%;
         }
     }
+
+    @media screen and (max-width: 650px) {
+
+        #anim {
+            width: 70%;
+
+            .compat {
+                flex-direction: row;
+    
+                .donneurs, .receveurs {
+                    flex-direction: column;
+                }
+            }
+
+            #reset {
+                width: 75%;
+            }
+        }
+    }
+
 }
 
 /*
@@ -553,6 +580,13 @@ a {
     &::before {
         left: 0;
         top: 0;
+    }
+
+    @media screen and (max-width: 650px) {
+        &::before,
+        &::after {
+            display: none;
+        }
     }
 
     // Animation du slider : rotation des images en boucle
@@ -706,4 +740,89 @@ a {
             padding-bottom: 3%;
         }
     }
+}
+
+.expand {
+    display: flex;
+    margin-inline: 8%;
+
+    .panel {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 50vh;
+        border-radius: 25px;
+        flex: 0.5;
+        position: relative;
+        transition: flex 0.5s ease-in;
+        cursor: pointer;
+        margin: 10px;
+        font-family: 'Comfortaa', sans-serif;
+        box-shadow: inset 3px 3px 9px rgba(0, 0, 0, 0.3);
+
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+            border-radius: 25px;
+            opacity: 0.4;
+        }
+
+        h3 {
+            position: absolute;
+            bottom: 40%;
+            left: 5%;
+            margin-right: 5%;
+            opacity: 0;
+            color: $dark-blue;
+        }
+
+        p {
+            position: absolute;
+            top: 65%;
+            left: 5%;
+            margin-right: 5%;
+            opacity: 0;
+            color: black;
+            font-weight: 500;
+        }
+    }
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.4s ease-in 0.4s;
+}
+
+.panel.active p {
+    opacity: 1;
+    transition: opacity 0.4s ease-in 0.4s;
+}
+
+@media(max-width:992px) {
+    .expand {
+        height: 100vh;
+
+        .panel {
+            height: 90%;
+
+            h3 {
+                top: 5%;
+            }
+
+            p {
+                top: 20%;
+            }
+        }
+    }
+}
+
+.table-responsive {
+    margin-top: 2%;
+    margin-inline: 8%;
 }

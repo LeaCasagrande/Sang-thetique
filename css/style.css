@@ -50,7 +50,7 @@ h1 {
   font-size: 3em;
   font-weight: 700;
   margin: 0;
-  color: #066385;
+  color: #06475e;
 }
 
 h2 {
@@ -82,7 +82,7 @@ a {
 #navig {
   padding-left: 7%;
   padding-right: 6%;
-  background-color: #066385;
+  background-color: #06475e;
 }
 
 .navbar-brand,
@@ -105,14 +105,14 @@ a {
 }
 
 .dropdown-menu {
-  background-color: #066385;
+  background-color: #06475e;
 }
 .dropdown-menu .dropdown-item {
   color: #eff0f4;
 }
 .dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
   color: #eff0f4;
-  background-color: #043f54;
+  background-color: #03232e;
 }
 
 /*
@@ -156,7 +156,7 @@ a {
   text-align: center;
 }
 .scroll-icon a {
-  color: #066385;
+  color: #06475e;
 }
 .scroll-icon a i {
   font-size: 30px;
@@ -362,7 +362,7 @@ a {
 }
 #groupes .aQui .blue {
   font-weight: bold;
-  color: #066385;
+  color: #06475e;
 }
 #groupes .aQui .red {
   font-weight: bold;
@@ -374,39 +374,45 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background-color: #eff0f4;
   border-radius: 10px;
 }
-#groupes #anim .grpDonneur, #groupes #anim .grpReceveur {
+#groupes #anim .compat {
+  display: flex;
+  flex-direction: column;
+}
+#groupes #anim .compat .donneurs {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+#groupes #anim .compat .donneurs .grpDonneur {
+  background-color: #06475e;
+  color: #eff0f4;
+}
+#groupes #anim .compat .donneurs .grpDonneur:hover {
+  background-color: #d5e0ed;
+  color: #06475e;
+  cursor: pointer;
+}
+#groupes #anim .compat .receveurs {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+#groupes #anim .compat .receveurs .grpReceveur {
+  background-color: #fca4a4;
+  color: black;
+  cursor: default;
+}
+#groupes #anim .grpDonneur,
+#groupes #anim .grpReceveur {
   margin: 10px;
   font-size: 1.2rem;
   padding: 10px;
   border: none;
   border-radius: 5px;
-}
-#groupes #anim .donneurs {
-  display: flex;
-  justify-content: center;
-  margin: 15px;
-}
-#groupes #anim .donneurs .grpDonneur {
-  background-color: #066385;
-  color: #eff0f4;
-}
-#groupes #anim .donneurs .grpDonneur:hover {
-  background-color: #d5e0ed;
-  color: #066385;
-  cursor: pointer;
-}
-#groupes #anim .receveurs {
-  display: flex;
-  justify-content: center;
-  margin: 15px;
-}
-#groupes #anim .receveurs .grpReceveur {
-  background-color: #f36161;
-  color: black;
-  cursor: default;
 }
 #groupes #anim #reset {
   justify-content: center;
@@ -430,6 +436,20 @@ a {
   #groupes .aQui,
   #groupes #anim {
     flex-basis: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  #groupes #anim {
+    width: 70%;
+  }
+  #groupes #anim .compat {
+    flex-direction: row;
+  }
+  #groupes #anim .compat .donneurs, #groupes #anim .compat .receveurs {
+    flex-direction: column;
+  }
+  #groupes #anim #reset {
+    width: 75%;
   }
 }
 
@@ -473,6 +493,11 @@ a {
 .slider::before {
   left: 0;
   top: 0;
+}
+@media screen and (max-width: 650px) {
+  .slider::before, .slider::after {
+    display: none;
+  }
 }
 .slider .slide-track {
   animation: scrolling 20s linear infinite;
@@ -580,7 +605,7 @@ a {
 }
 
 .btn-primary {
-  background-color: #066385;
+  background-color: #06475e;
   border: none;
 }
 .btn-primary:hover {
@@ -610,4 +635,82 @@ a {
   .contact .formulaire {
     padding-bottom: 3%;
   }
+}
+
+.expand {
+  display: flex;
+  margin-inline: 8%;
+}
+.expand .panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  border-radius: 25px;
+  flex: 0.5;
+  position: relative;
+  transition: flex 0.5s ease-in;
+  cursor: pointer;
+  margin: 10px;
+  font-family: "Comfortaa", sans-serif;
+  box-shadow: inset 3px 3px 9px rgba(0, 0, 0, 0.3);
+}
+.expand .panel img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+  opacity: 0.4;
+}
+.expand .panel h3 {
+  position: absolute;
+  bottom: 40%;
+  left: 5%;
+  margin-right: 5%;
+  opacity: 0;
+  color: #06475e;
+}
+.expand .panel p {
+  position: absolute;
+  top: 65%;
+  left: 5%;
+  margin-right: 5%;
+  opacity: 0;
+  color: black;
+  font-weight: 500;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.4s ease-in 0.4s;
+}
+
+.panel.active p {
+  opacity: 1;
+  transition: opacity 0.4s ease-in 0.4s;
+}
+
+@media (max-width: 992px) {
+  .expand {
+    height: 100vh;
+  }
+  .expand .panel {
+    height: 90%;
+  }
+  .expand .panel h3 {
+    top: 5%;
+  }
+  .expand .panel p {
+    top: 20%;
+  }
+}
+.table-responsive {
+  margin-top: 2%;
+  margin-inline: 8%;
 }/*# sourceMappingURL=style.css.map */

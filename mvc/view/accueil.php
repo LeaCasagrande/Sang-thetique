@@ -14,7 +14,6 @@
 <!-- Notre mission -->
 <div class="part fonce" id="mission">
     <h2>Notre mission</h2>
-    <!-- essayer en mettant une div autour de chaque image et ajuster taille de l'image par rapport à la div parent -->
 
     <div class="missions">
         <div class="oneMission">
@@ -38,12 +37,29 @@
     </div>
 
     <h4>La production de sang synthétique peut être accomplie de différentes façons :</h4>
-    <ul style="list-style-type: '\1FA78';">
-        <li>Culture de cellules souches : Les cellules souches peuvent être cultivées en laboratoire et différenciées en différents types de cellules sanguines, telles que les globules rouges et les plaquettes.</li>
-        <li>Thérapie génique : Les anomalies génétiques associées à des troubles sanguins peuvent être corrigées par thérapie génique en utilisant des vecteurs viraux pour introduire de nouveaux gènes fonctionnels dans les cellules souches ou les cellules sanguines.</li>
-        <li>Bioimpression : La bioimpression 3D peut être utilisée pour produire des structures sanguines en 3D en utilisant des bio-imprimantes pour déposer des cellules et des matériaux biologiques sur un substrat.</li>
-        <li>Ingénierie tissulaire : Les techniques d'ingénierie tissulaire peuvent être utilisées pour améliorer la qualité et la fonction des produits sanguins synthétiques en utilisant des matériaux biocompatibles pour soutenir la croissance et la maturation des cellules sanguines produites.</li>
-    </ul>
+    <div class="expand">
+        <div class="panel active">
+            <img src="../../ressources/culture-cellules.jpg" alt="">
+            <h3>Culture de cellules souches</h3>
+            <p>Les cellules souches peuvent être cultivées en laboratoire et différenciées en différents types de cellules sanguines, telles que les globules rouges et les plaquettes.</p>
+        </div>
+        <div class="panel">
+            <img src="../../ressources/therapie-genique.jpg" alt="">
+            <h3>Thérapie génique</h3>
+            <p>Les anomalies génétiques associées à des troubles sanguins peuvent être corrigées par thérapie génique en utilisant des vecteurs viraux pour introduire de nouveaux gènes fonctionnels dans les cellules souches ou les cellules sanguines.</p>
+        </div>
+        <div class="panel">
+            <img src="../../ressources/mission3.jpg" alt="">
+            <h3>Bio-impression</h3>
+            <p>La bioimpression 3D peut être utilisée pour produire des structures sanguines en 3D en utilisant des bio-imprimantes pour déposer des cellules et des matériaux biologiques sur un substrat.</p>
+        </div>
+        <div class="panel">
+            <img src="../../ressources/ingenierie-tissulaire.jpg" alt="">
+            <h3>Ingénierie tissulaire</h3>
+            <p>Les techniques d'ingénierie tissulaire peuvent être utilisées pour améliorer la qualité et la fonction des produits sanguins synthétiques en utilisant des matériaux biocompatibles pour soutenir la croissance et la maturation des cellules sanguines produites.</p>
+        </div>
+    </div>
+</div>
 
 </div>
 
@@ -98,25 +114,27 @@
             <p>&#128270; Les donneurs sont en <span class="blue">bleu</span> et les receveurs en <span class="red">rouge</span>.</p>
         </div>
         <div id="anim">
-            <div class="donneurs">
-                <span class="grpDonneur">A+</span>
-                <span class="grpDonneur">A-</span>
-                <span class="grpDonneur">B+</span>
-                <span class="grpDonneur">B-</span>
-                <span class="grpDonneur">AB+</span>
-                <span class="grpDonneur">AB-</span>
-                <span class="grpDonneur">O+</span>
-                <span class="grpDonneur">O-</span>
-            </div>
-            <div class="receveurs">
-                <span class="grpReceveur">A+</span>
-                <span class="grpReceveur">A-</span>
-                <span class="grpReceveur">B+</span>
-                <span class="grpReceveur">B-</span>
-                <span class="grpReceveur">AB+</span>
-                <span class="grpReceveur">AB-</span>
-                <span class="grpReceveur">O+</span>
-                <span class="grpReceveur">O-</span>
+            <div class="compat">
+                <div class="donneurs">
+                    <span class="grpDonneur">A+</span>
+                    <span class="grpDonneur">A-</span>
+                    <span class="grpDonneur">B+</span>
+                    <span class="grpDonneur">B-</span>
+                    <span class="grpDonneur">AB+</span>
+                    <span class="grpDonneur">AB-</span>
+                    <span class="grpDonneur">O+</span>
+                    <span class="grpDonneur">O-</span>
+                </div>
+                <div class="receveurs">
+                    <span class="grpReceveur">A+</span>
+                    <span class="grpReceveur">A-</span>
+                    <span class="grpReceveur">B+</span>
+                    <span class="grpReceveur">B-</span>
+                    <span class="grpReceveur">AB+</span>
+                    <span class="grpReceveur">AB-</span>
+                    <span class="grpReceveur">O+</span>
+                    <span class="grpReceveur">O-</span>
+                </div>
             </div>
             <span type="reset" class="btn btn-primary" id="reset">Réinitialiser</span>
         </div>
