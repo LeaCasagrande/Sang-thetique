@@ -537,14 +537,14 @@ a {
 */
 .banniere {
   position: relative;
-  height: 40vh;
+  height: 30vh;
   display: flex;
   justify-content: center;
   text-align: center;
 }
 .banniere .imgequipe {
   width: 100%;
-  height: 40vh;
+  height: 30vh;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;

@@ -9,7 +9,7 @@ include('../model/model_get.php');
 $employes = getAllEmployees($bdd);
 
 // On inclue la vue de la page
-include('../view/page_annuaire.php');
+include('../view/annuaire.php');
 // On inclue la vue du footer
 include('../view/footer.php');
 ?>

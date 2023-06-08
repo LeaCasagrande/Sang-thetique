@@ -17,7 +17,7 @@ if (isset($_GET['equipe'])) {
 }
 
 // On inclue la vue de la page
-include('../view/page_equipe.php');
+include('../view/equipe.php');
 // On inclue la vue du footer
 include('../view/footer.php');
 ?>

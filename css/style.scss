@@ -633,14 +633,14 @@ a {
 
 .banniere {
     position: relative;
-    height: 40vh;
+    height: 30vh;
     display: flex;
     justify-content: center;
     text-align: center;
 
     .imgequipe {
         width: 100%;
-        height: 40vh;
+        height: 30vh;
         object-fit: cover;
         position: absolute;
         z-index: 1;
