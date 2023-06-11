@@ -446,11 +446,11 @@ a {
                 display: flex;
                 justify-content: center;
                 margin: 15px;
-    
+
                 .grpDonneur {
                     background-color: $dark-blue;
                     color: $bg-body;
-    
+
                     &:hover {
                         background-color: $light-blue;
                         color: $dark-blue;
@@ -458,12 +458,12 @@ a {
                     }
                 }
             }
-    
+
             .receveurs {
                 display: flex;
                 justify-content: center;
                 margin: 15px;
-    
+
                 .grpReceveur {
                     background-color: #fca4a4;
                     color: black;
@@ -515,8 +515,9 @@ a {
 
             .compat {
                 flex-direction: row;
-    
-                .donneurs, .receveurs {
+
+                .donneurs,
+                .receveurs {
                     flex-direction: column;
                 }
             }
@@ -583,6 +584,7 @@ a {
     }
 
     @media screen and (max-width: 650px) {
+
         &::before,
         &::after {
             display: none;
@@ -685,6 +687,15 @@ a {
 
             .card-title {
                 font-size: medium;
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
             }
         }
     }

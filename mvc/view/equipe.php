@@ -44,7 +44,7 @@
                         <img src="../../ressources/avatar.png" class="card-img-top" alt="...">
                     <?php } ?>
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $data['prenom_personnel'] . " " . $data['nom_personnel'] ?></h5>
+                        <h5 class="card-title"><a href="mailto:<?php echo $data["mail_personnel"]; ?>"><?php echo $data['prenom_personnel'] . " " . $data['nom_personnel'] ?></a></h5>
                         <p class="card-text"><?php echo $data['nom_poste'] ?></p>
                     </div>
                 </div>

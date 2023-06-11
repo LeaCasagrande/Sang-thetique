@@ -445,7 +445,8 @@ a {
   #groupes #anim .compat {
     flex-direction: row;
   }
-  #groupes #anim .compat .donneurs, #groupes #anim .compat .receveurs {
+  #groupes #anim .compat .donneurs,
+  #groupes #anim .compat .receveurs {
     flex-direction: column;
   }
   #groupes #anim #reset {
@@ -587,6 +588,13 @@ a {
 }
 .cards .card .card-body .card-title {
   font-size: medium;
+}
+.cards .card .card-body .card-title a {
+  text-decoration: none;
+  color: inherit;
+}
+.cards .card .card-body .card-title a:hover {
+  text-decoration: underline;
 }
 
 /*
